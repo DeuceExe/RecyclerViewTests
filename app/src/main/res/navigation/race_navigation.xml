@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/race_navigation"
+    android:label="Undead Army"
+    app:startDestination="@id/basicFragment">
+    <fragment
+        android:id="@+id/basicFragment"
+        android:name="com.example.recyclerviewlesson.fragment.BasicFragment"
+        android:label="@string/app_label"
+        tools:layout="@layout/fragment_basic">
+        <action
+            android:id="@+id/action_basicFragment_to_elfFragment2"
+            app:destination="@id/elfFragment" />
+        <action
+            android:id="@+id/action_basicFragment_to_hordeFragment"
+            app:destination="@id/hordeFragment" />
+        <action
+            android:id="@+id/action_basicFragment_to_undeadFragment"
+            app:destination="@id/undeadFragment" />
+        <action
+            android:id="@+id/action_basicFragment_to_racesFragment"
+            app:destination="@id/racesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/elfFragment"
+        android:name="com.example.recyclerviewlesson.fragment.ElfFragment"
+        android:label="@string/elf_army"
+        tools:layout="@layout/fragment_elf" />
+    <fragment
+        android:id="@+id/hordeFragment"
+        android:name="com.example.recyclerviewlesson.fragment.HordeFragment"
+        android:label="@string/horde_army"
+        tools:layout="@layout/fragment_horde" />
+    <fragment
+        android:id="@+id/undeadFragment"
+        android:name="com.example.recyclerviewlesson.fragment.UndeadFragment"
+        android:label="@string/undead_army"
+        tools:layout="@layout/fragment_undead" />
+    <fragment
+        android:id="@+id/racesFragment"
+        android:name="com.example.recyclerviewlesson.fragment.RacesFragment"
+        android:label="@string/race_army"
+        tools:layout="@layout/fragment_races" />
+</navigation>
